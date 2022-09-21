@@ -1,0 +1,102 @@
+<html>
+<body background="keyboard1.jpg" style=background-repeat:no-repeat>
+ <script type="text/javascript">
+     function disp()
+   {
+     var name=document.getElementById("na").value;      
+     var pinno=document.getElementById("pin").value;   
+      var i=document.form.gender;
+      var adress=document.getElementById("add").value;
+      var gmail=document.getElementById("g-m").value;
+      var password=document.getElementById("pasw").value;
+      var j=document.forms[0].college;
+      var br=document.forms[0].branch;
+      var a=document.forms[0].c1;
+      var b=document.forms[0].c2;
+      var c=document.forms[0].c3;
+     var d=document.forms[0].c4;
+      if(i[0].checked==true)
+        document.write("Gender:Male");
+     else
+       document.write("Gender:Female");
+document.write("<br><br>");
+     document.write("name: "+name);
+  document.write("<br><br>");
+     document.write("PIN: "+pinno);
+  document.write("<br><br>");
+     document.write("Address: "+adress);
+  document.write("<br><br>");
+     document.write("mail-id: "+gmail);
+  document.write("<br><br>");
+     document.write("password: "+password);
+  document.write("<br><br>");
+     document.write("Branch: "+br.options[br.selectedIndex].value);
+  document.write("<br><br>");
+     document.write("College: "+j.options[j.selectedIndex].value);
+    document.write("<br><br>");
+    document.write("Courses:");
+
+  if(a.checked)
+     document.write("python,");
+  if(b.checked)
+     document.write("html,");
+ if(c.checked)
+     document.write("css,");
+ if(d.checked)
+     document.write("java");
+  }
+
+     
+ </script>
+ <table align="center" cellspacing=10px cellpadding=10px style=color:white>
+  <form name="form"> 
+<tr><td colspan=2> <font size=8 color="white" style=text-decoration:underline>REGISTRATION FORM</td></tr>
+<tr>              
+ <td > NAME: </td>
+ <td> <input type="text" id="na"  required ></td>
+</tr>
+<tr> 
+ <td >PIN: </td>
+<td><input type="text" id="pin"  required ></td>
+</tr>
+<tr>
+ <td >GENDER: </td>
+ <td>  Male<input type="radio" name="gender" value="male"> Female<input type="radio" name="gender" value="female"></input></td>
+</tr>
+<tr>
+ <td >ADDRESS: </td>
+ <td> <textarea rows=3 columns=4 id="add"> </textarea></td>
+</tr>
+<tr>
+ <td > MAIL-ID: </td>
+ <td>  <input type="text" value="@gmail.com" id="g-m"></td>
+</tr>
+<tr>
+ <td >PASSWORD: </td>
+ <td>   <input type="password" maxlength=6 placeholder="enter only 6 characters" id="pasw"></td>
+</tr>
+<tr>
+ <td >BRANCH: </td>
+ <td><select name="branch">
+                  <option>CSE</option>
+                  <option>ECE</option>
+                  </select></td>
+</tr>
+<tr>
+ <td>COURSES: </td>
+ <td>PYTHON<input type="checkbox" name="c1">HTML<input type="checkbox" name="c2">CSS <input type="checkbox" name="c3">JAVA<input type="checkbox" name="c4"></td>
+</tr>
+<tr>
+ <td>COLLEGE: </td>
+ <td> <select name="college">
+                  <option>AEC</option>
+                  <option>ACET</option>
+                  <option>ACOE</option> </select></td>
+</tr>    
+<tr>
+<td><input type="reset">  </td><td></input>  <input type="submit" value="submit" onclick="disp()"></input></td>
+</tr>
+</form>
+</table>
+</body>
+</html>
